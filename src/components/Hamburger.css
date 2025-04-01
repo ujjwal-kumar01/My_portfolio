@@ -1,0 +1,99 @@
+/* 🔹 Overlay - Click Outside to Close */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* 🍔 Hamburger Button */
+  .hamburger-btn {
+    position: fixed;
+    top: 0.5rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+    background: rgb(64, 62, 62);
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .hamburger-btn div {
+    width: 35px;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* 🟢 Open State - Turns into "X" */
+  .hamburger-btn.open div:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+  }
+  
+  .hamburger-btn.open div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-btn.open div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+  }
+  
+  /* 📜 Sliding Menu (Hidden by Default) */
+  .hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+  
+  /* 🔥 Show Menu (Slide-In) */
+  .hamburger-menu.show {
+    right: 0;
+  }
+  
+  /* ❌ Close Button Inside Menu */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* 🔹 Responsive Sizes */
+  @media (max-width: 480px) { /* Mobile */
+    .hamburger-menu {
+      width: 270px;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Tablets */
+    .hamburger-menu {
+      width: 300px;
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Desktop */
+    .hamburger-menu {
+      width: 320px;
+    }
+  }
+  

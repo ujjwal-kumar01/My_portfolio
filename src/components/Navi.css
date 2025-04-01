@@ -1,0 +1,82 @@
+body{
+    background-color: #111;
+}
+
+.app {
+    height: 50vh;
+    width: 300px;
+    display: flex;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .medium-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s;
+  }
+
+  .medium-circle:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .toggle-circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    z-index: 1;
+  }
+
+  .menu-item {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform-origin: center;
+    opacity: 0.9;
+    transition: color 0.3s;
+  }
+
+  .menu-item:hover {
+    color: #00bcd4;
+  }
+
+  .menu-item {
+    transform: rotate(var(--angle)) translate(110px) rotate(calc(-1 * var(--angle)));
+  }
+
+  /* Adjusted Path for the inner circle */
+  @keyframes move-along-path {
+    0% { transform: translate(-20px, -20px); }
+    25% { transform: translate(20px, -20px); }
+    50% { transform: translate(20px, 20px); }
+    75% { transform: translate(-20px, 20px); }
+    100% { transform: translate(-20px, -20px); }
+  }
+
