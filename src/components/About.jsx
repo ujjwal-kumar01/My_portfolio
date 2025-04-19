@@ -26,17 +26,15 @@ function About() {
   }, []);
 
   return (
-    <div className="about">
+    <div className="about" >
       <div id="backgroundtop2"></div>
+      <h2 className="welcome">Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;</h2>
       <div id="Aboutme">
-        <div className="scrolling-text">
-          <h2>About Me&nbsp;&nbsp; About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me&nbsp;&nbsp; About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;</h2>
-          <h2>About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me&nbsp;&nbsp; About Me&nbsp;&nbsp; About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;</h2>
-        </div>
+          <h2 id="about">About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;</h2>
         <div id="aboutmemain">
           <p id="mydetails">
-            Hi, I'm <b>Ujjwal Kumar</b>,<br/> a software developer and B.Tech student at <b>IIIT Una, HP</b>,<br/> specializing in <b>web development</b> and <b>DSA</b>.<br/>
-            I have hands-on experience in full-stack development,<br/> focusing on scalable solutions and problem-solving.
+            Hi, I'm <b>Ujjwal Kumar</b>, a software developer and B.Tech student at <b>IIIT Una, HP</b>,specializing in <b>Web development</b> and <b>DSA</b>.
+            I have hands-on experience in full-stack development, focusing on scalable solutions and problem-solving.
           </p>
           <div id="htmlicons">
             <img src={html_css_collage_concept} alt="my photo" id="myphoto2" />

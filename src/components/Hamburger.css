@@ -8,10 +8,10 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 998;
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* 🍔 Hamburger Button */
-  .hamburger-btn {
+}
+
+/* 🍔 Hamburger Button */
+.hamburger-btn {
     position: fixed;
     top: 0.5rem;
     right: 1rem;
@@ -23,30 +23,41 @@
     border-radius: 8px;
     cursor: pointer;
     z-index: 1001;
-  }
-  
-  .hamburger-btn div {
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🟢 Hover Effect - All Lines Together */
+.hamburger-btn:hover {
+    background: rgb(90, 90, 90);
+}
+
+.hamburger-btn div {
     width: 35px;
     height: 4px;
     background-color: white;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* 🟢 Open State - Turns into "X" */
-  .hamburger-btn.open div:nth-child(1) {
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* 🟢 Change all lines together on hover */
+.hamburger-btn:hover div {
+    background-color: #ff9800; /* Orange */
+}
+
+/* 🟢 Open State - Turns into "X" */
+.hamburger-btn.open div:nth-child(1) {
     transform: rotate(45deg) translateY(10px);
-  }
-  
-  .hamburger-btn.open div:nth-child(2) {
+}
+
+.hamburger-btn.open div:nth-child(2) {
     opacity: 0;
-  }
-  
-  .hamburger-btn.open div:nth-child(3) {
+}
+
+.hamburger-btn.open div:nth-child(3) {
     transform: rotate(-45deg) translateY(-10px);
-  }
-  
-  /* 📜 Sliding Menu (Hidden by Default) */
-  .hamburger-menu {
+}
+
+/* 📜 Sliding Menu (Hidden by Default) */
+.hamburger-menu {
     position: fixed;
     top: 0;
     right: -100%;
@@ -59,15 +70,32 @@
     padding: 2rem;
     transition: right 0.3s ease-in-out;
     z-index: 999;
-  }
-  
-  /* 🔥 Show Menu (Slide-In) */
-  .hamburger-menu.show {
+}
+
+/* 🔥 Show Menu (Slide-In) */
+.hamburger-menu.show {
+    background-color: rgb(36, 36, 36);
     right: 0;
-  }
-  
-  /* ❌ Close Button Inside Menu */
-  .close-btn {
+}
+
+/* 🟢 Hover Effect */
+.hamburger-menu:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+/* ❌ Close Button and Home Button - Hover Together */
+.close-btn,
+.hamburger-menu .menu-item-home {
+    transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover,
+.hamburger-menu .menu-item-home:hover {
+    color: #ff4081; /* Pink */
+}
+
+/* ❌ Close Button */
+.close-btn {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -76,24 +104,47 @@
     color: white;
     font-size: 2rem;
     cursor: pointer;
-  }
-  
-  /* 🔹 Responsive Sizes */
-  @media (max-width: 480px) { /* Mobile */
+}
+
+/* 🏠 Home Button */
+.hamburger-menu .menu-item-home {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+/* 🔹 Responsive Sizes */
+@media (max-width: 480px) { /* Mobile */
     .hamburger-menu {
-      width: 270px;
+        width: 270px;
     }
-  }
-  
-  @media (max-width: 768px) { /* Tablets */
+
+    /* 🟢 Hover Effect */
+    .hamburger-menu:hover {
+        background-color: rgb(45, 45, 45);
+    }
+}
+
+@media (max-width: 768px) { /* Tablets */
     .hamburger-menu {
-      width: 300px;
+        width: 300px;
     }
-  }
-  
-  @media (min-width: 1024px) { /* Desktop */
+
+    /* 🟢 Hover Effect */
+    .hamburger-menu:hover {
+        background-color: rgb(40, 40, 40);
+    }
+}
+
+@media (min-width: 1024px) { /* Desktop */
     .hamburger-menu {
-      width: 320px;
+        width: 320px;
     }
-  }
-  
+
+    /* 🟢 Hover Effect */
+    .hamburger-menu:hover {
+        background-color: rgb(35, 35, 35);
+    }
+}

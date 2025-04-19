@@ -25,28 +25,32 @@ function Navi() {
                             : 'none',
                     }}
                 ></div>
-                <div className="medium-circle menu-item" onClick={handleResetClick} 
-                ><div
-                style={{
-                    opacity: activeItem === null || activeItem === 4 ? 0 : 1,
-                    color: activeItem === null || activeItem === 4 ? '#fff' : '#00bcd4'
-                }}
-            >
-                Home
-            </div>
-            </div>
+
+                {/* Home Button */}
+                <a href="#home" className="medium-circle" onClick={handleResetClick}>
+                    <div
+                        style={{
+                            zIndex: 10,
+                            opacity: activeItem === null || activeItem === 4 ? 0 : 1,
+                            color: '#fff',
+                        }}
+                        className='homii'
+                    >
+                        Home
+                    </div>
+                </a>
 
                 {/* Menu Items */}
-                <a href="#home" className="menu-item" style={{ '--angle': '0deg' }} onClick={() => handleClick(0)}>
+                <a href="#" className="menu-item" style={{ '--angle': '0deg' }} onClick={() => handleClick(0)}>
                     Index
                 </a>
-                <a href="#" className="menu-item" style={{ '--angle': '90deg' }} onClick={() => handleClick(1)}>
+                <a href="#about" className="menu-item" style={{ '--angle': '90deg' }} onClick={() => handleClick(1)}>
                     About
                 </a>
                 <a href="#" className="menu-item" style={{ '--angle': '180deg' }} onClick={() => handleClick(2)}>
                     Work
                 </a>
-                <a href="#" className="menu-item" style={{ '--angle': '270deg' }} onClick={() => handleClick(3)}>
+                <a href="#ContactUs" className="menu-item" style={{ '--angle': '270deg' }} onClick={() => handleClick(3)}>
                     Contact
                 </a>
             </div>

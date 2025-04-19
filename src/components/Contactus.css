@@ -1,0 +1,57 @@
+/* Contactus.css */
+#fadeInEffect {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#fadeInEffect.show {
+  opacity: 1;
+}
+#c{
+  position: relative;
+  display: block;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+#ContactUs{
+  display: block;
+  font-family: 'Impact', sans-serif;
+  white-space: nowrap;
+  font-size: 4rem;
+  overflow:hidden;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  width: max-content;
+  animation: slideText2 30s linear infinite;
+  color: rgb(0, 0, 0);
+  background-color: #f45926;
+}
+
+/* .covering{
+  opacity:0.9
+} */
+
+@keyframes slideText2 {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 800px)  {
+  .ContactUs{
+      font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px)  {
+  .ContactUs{
+      font-size: 2rem;
+  }
+}
