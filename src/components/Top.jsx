@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import myPhoto from "./myphoto2.jpg";
-import "./Top.css";
+import myPhoto from "./icons/myphoto2.jpg";
+import githubIcon from "./icons/github-94.png"; // replace with your icons
+import linkedinIcon from "./icons/linkedin.png";
+import instagramIcon from "./icons/instagram.png";
+import "./css_files/Top.css";
 import Hamburger from "./Hamburger";
 
 function Top() {
@@ -65,17 +68,47 @@ function Top() {
   return (
     <div id="home">
       <div className="top">
-        <div className="techi"> Tech Enthusiast</div>
-        <div id="hello">Hii, I'm Ujjwal 👋</div>
-        <div className="stacki">Frontend → Backend</div>
+        <div className="ribbon">OPEN TO WORK</div>
+        <div className="marg">
+          <div className="techi"> Tech Enthusiast</div>
+          <div id="hello">Hii, I'm Ujjwal 👋</div>
+          <div className="stacki">Frontend → Backend</div>
+        </div>
       </div>
-      <div className="image">
-        <img src={myPhoto} alt="profilePic" className="photo" />
+      <div className="ribbonPosition">
+        <div className="ribbon2">OPEN TO WORK</div>
+        <div className="image">
+          <img src={myPhoto} alt="profilePic" className="photo" />
+        </div>
       </div>
       <Hamburger />
       <div className="top-container flex flex-col">
         <div className="webtext">Web</div>
         <div className="webtext text">{currentWord}</div>
+        {/* 🔗 Social Links + Resume */}
+        <div className="social-links">
+          <a
+            href="https://github.com/ujjwal-kumar01"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={githubIcon} alt="GitHub" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ujjwal-kumar-692501296/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedinIcon} alt="LinkedIn" />
+          </a>
+          <a
+            href="https://www.instagram.com/ujjwal_srivastava01/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={instagramIcon} alt="Instagram" />
+          </a>
+        </div>
       </div>
     </div>
   );

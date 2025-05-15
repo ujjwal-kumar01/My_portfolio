@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navi.css';
+import './css_files/Navi.css';
 
 function Navi() {
     const [activeItem, setActiveItem] = useState(null);
@@ -41,17 +41,17 @@ function Navi() {
                 </a>
 
                 {/* Menu Items */}
-                <a href="#" className="menu-item" style={{ '--angle': '0deg' }} onClick={() => handleClick(0)}>
-                    Index
-                </a>
-                <a href="#about" className="menu-item" style={{ '--angle': '90deg' }} onClick={() => handleClick(1)}>
-                    About
-                </a>
-                <a href="#" className="menu-item" style={{ '--angle': '180deg' }} onClick={() => handleClick(2)}>
-                    Work
-                </a>
-                <a href="#ContactUs" className="menu-item" style={{ '--angle': '270deg' }} onClick={() => handleClick(3)}>
+                <a href="#ContactUs" className="menu-item" style={{ '--angle': '0deg' }} onClick={() => handleClick(0)}>
                     Contact
+                </a>
+                <a href="#projects-section" className="menu-item" style={{ '--angle': '90deg' }} onClick={() => handleClick(1)}>
+                    Projects
+                </a>
+                <a href="#skills-section" className="menu-item" style={{ '--angle': '180deg' }} onClick={() => handleClick(2)}>
+                    Skills
+                </a>
+                <a href="#about" className="menu-item" style={{ '--angle': '270deg' }} onClick={() => handleClick(3)}>
+                    About
                 </a>
             </div>
         </div>

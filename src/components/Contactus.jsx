@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Contactus.css';
+import './css_files/Contactus.css';
 
 export default function Contact() {
   useEffect(() => {
@@ -9,7 +9,7 @@ export default function Contact() {
         const rect = aboutSection2.getBoundingClientRect();
         
         // Apply "show" class when the section is in view, remove it when scrolled out
-        if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+        if (rect.top < window.innerHeight * 0.5 && rect.bottom > 0) {
           aboutSection2.classList.add("show");
         } else {
           aboutSection2.classList.remove("show");
@@ -26,7 +26,7 @@ export default function Contact() {
 
   return (
     <div id= "c">
-    <h2 id="ContactUs">Contact Us! &nbsp;&nbsp;Contact Us! &nbsp;&nbsp;Contact Us! &nbsp;&nbsp;Contact Us! &nbsp;&nbsp;Contact Us! &nbsp;&nbsp;Contact Us! &nbsp;&nbsp;Contact Us! &nbsp;&nbsp;Contact Us! &nbsp;&nbsp;</h2>
+    <h2 id="ContactUs">Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;</h2>
     
     <div
       className="relative flex items-center justify-center min-h-screen bg-[#1d1d1d] py-10 px-4"
@@ -40,6 +40,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-lg text-gray-600">
+              Lets Work Together!<br/>
               Fill in the form to start a conversation with us.
             </p>
 
@@ -49,7 +50,7 @@ export default function Contact() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <span className="text-md font-semibold">Sultanpur, Danapur Cantt, Patna, Bihar</span>
+              <span className="text-md font-semibold">Patna, Bihar-801503</span>
             </div>
 
             {/* Phone */}

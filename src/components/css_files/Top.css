@@ -7,6 +7,64 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+.marg{
+  margin-left: 30px;
+}
+
+.social-links {
+  right:15px;
+  bottom: 15px;
+  position: fixed;
+  /* margin-top: 1.5rem; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  z-index: 2000;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+.ribbon {
+  position: absolute;
+  top: 22px;       /* adjust as needed */
+  left: -40px;     /* adjust as needed */
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 36px;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-top: 2px solid #800000; /* optional */
+}
+.ribbon2 {
+  display: none;
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  top: 35px;       /* adjust as needed */
+  left: -40px;     /* adjust as needed */
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 4px 36px;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-top: 2px solid #800000; /* optional */
+}
 
 html {
   scroll-behavior: smooth;
@@ -37,7 +95,7 @@ html {
 .top {
   height: auto;
   background-color: #f45926;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: 'Times New Roman', Times, serif;
   font-size: 3rem;
   padding: 2% 5%;
@@ -54,6 +112,7 @@ html {
   font-size: clamp(7rem, 8.5vw, 9rem);
   width: 100%;
   text-align: left;
+  position: relative;
 }
 
 .webtext {
@@ -109,6 +168,7 @@ html {
 }
 
 @media (min-width: 1450px) {
+  
     .image{
       height: 40rem;
       width: 30rem;
@@ -155,6 +215,7 @@ html {
 
 /* Tablets (max 1000px) */
 @media (max-width: 1000px) {
+  
   .top {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
     padding: 3% 5%;
@@ -208,16 +269,27 @@ html {
 
 /* Mobile Screens */
 @media (max-width: 800px) {
+  .ribbon{
+    display: none;
+  }
+  .ribbon2{
+    display:inline;
+  }
+  .ribbonPosition{
+  position: relative;
+  overflow: hidden;
+}
+  
   .image {
     position:relative ;
     top: 0%;
     right: 0%;
     margin: 0 auto;
-    margin-top: 5%;
-    height: 20rem;
+    margin-top: 1%;
+    height: 22rem;
     width: 20rem;
-    border-radius: 50%;
-    border: 3px solid white;
+    /* border-radius: 50%; */
+    /* border: 3px solid white; */
   }
 
   .top-container {
@@ -256,11 +328,11 @@ html {
 
   .image {
     position: relative;
-    margin-top: 5%;
-    height: 15rem;
+    margin-top: 2%;
+    height: 17rem;
     width: 15rem;
-    border-radius: 50%;
-    border: 3px solid white;
+    /* border-radius: 50%; */
+    /* border: 3px solid white; */
   }
 
   .top-container {

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import html_css_collage_concept from "./html-css-collage-concept.jpg";
-import "./AboutMe.css";
+import html_css_collage_concept from "./icons/html-css-collage-concept.jpg";
+import "./css_files/Aboutme.css";
+import resumePdf from "../assets/resume_ujjwal.pdf"; // place your resume in /src/resume
 
 function About() {
   useEffect(() => {
@@ -10,7 +11,7 @@ function About() {
         const rect = aboutSection.getBoundingClientRect();
 
         // Apply "show" class when the section is in view, remove it when scrolled out
-        if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+        if (rect.top < window.innerHeight * 0.5 && rect.bottom > 0) {
           aboutSection.classList.add("show");
         } else {
           aboutSection.classList.remove("show");
@@ -33,8 +34,12 @@ function About() {
         <h2 id="about">About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;</h2>
         <div id="aboutmemain">
           <p id="mydetails">
-            Hi, I'm <b>Ujjwal Kumar</b>, a software developer and B.Tech student at <b>IIIT Una, HP</b>,specializing in <b>Web development</b> and <b>DSA</b>.
-            I have hands-on experience in full-stack development, focusing on scalable solutions and problem-solving.
+            Hi, I'm <b>Ujjwal</b>, a software developer and B.Tech student at <b>IIIT Una, HP</b>,specializing in <b>Web development</b> and <b>DSA</b>.
+            I have hands-on experience in full-stack development, focusing on scalable solutions and problem-solving.<br />
+            <br/>
+            <a href={resumePdf} download className="resume-btn">
+              Download Resume
+            </a>
           </p>
           <div id="htmlicons">
             <img src={html_css_collage_concept} alt="my photo" id="myphoto2" />
