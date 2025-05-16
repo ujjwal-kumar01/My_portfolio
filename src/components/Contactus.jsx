@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import './css_files/Contactus.css';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 export default function Contact() {
+   const form = useRef();
   useEffect(() => {
     const handleScroll2 = () => {
       const aboutSection2 = document.getElementById("fadeInEffect");
@@ -23,6 +26,25 @@ export default function Contact() {
     window.addEventListener("scroll", handleScroll2);
     return () => window.removeEventListener("scroll", handleScroll2);
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceid=import.meta.env.VITE_EMAILJS_SERVICE_ID 
+    const templateid= import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publicid= import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+    emailjs
+      .sendForm(serviceid , templateid , form.current, publicid )
+      .then(() => {
+        alert('Message sent!');
+        form.current.reset();
+      })
+      .catch((error) => {
+        alert(`Failed to send message.+${error}`);
+        console.error(error);
+      });
+  };
 
   return (
     <div id= "c">
@@ -71,14 +93,16 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-6 bg-gray-200 text-gray-700 font-medium rounded-lg shadow-md px-5 py-5">
+          <form ref={form} onSubmit={handleSubmit} className="space-y-6 bg-gray-200 text-gray-700 font-medium rounded-lg shadow-md px-5 py-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex flex-col">
                 <label htmlFor="name" className="text-base text-gray-700 font-medium">Full Name</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   placeholder="Your Name"
+                  required
                   className="mt-1 py-3 px-4 text-base border border-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
@@ -88,6 +112,8 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   placeholder="Your Email"
                   className="mt-1 py-3 px-4 text-base border border-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
@@ -99,6 +125,7 @@ export default function Contact() {
               <input
                 type="tel"
                 id="tel"
+                name="phone"  
                 placeholder="Your Phone Number"
                 className="mt-1 py-3 px-4 text-base border border-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
               />
@@ -109,6 +136,8 @@ export default function Contact() {
               <label htmlFor="message" className="text-base text-gray-700 font-medium">Message</label>
               <textarea
                 id="message"
+                name="message"
+                required
                 placeholder="Your Message"
                 className="mt-1 py-3 px-4 text-base border border-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none h-32"
               />
