@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import myPhoto from "./icons/myphoto2.jpg";
+import myPhoto from "./icons/myphoto1.jpg";
 import githubIcon from "./icons/github-94.png"; // replace with your icons
 import linkedinIcon from "./icons/linkedin.png";
 import instagramIcon from "./icons/instagram.png";

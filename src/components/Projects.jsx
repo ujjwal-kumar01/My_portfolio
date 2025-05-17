@@ -28,6 +28,7 @@ const Projects = () => {
   return (
     <section id="projects-section">
       <h2 className="projects-heading">Projects</h2>
+      <div id="mydetails3">I love building meaningful web applications that solve real-world problems. From full-stack platforms to browser extensions and AI-based tools, each project reflects my passion for clean architecture, user-centric design, and efficient problem-solving.</div>
       <div className="projects-container">
         {/* Alumni Connect */}
         <a

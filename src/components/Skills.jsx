@@ -57,6 +57,7 @@ function Skills() {
     <>
       <div id="skills-section">
         <h3 className="skills-heading">Skills</h3>
+        <p id='mydetails2'>I build full-stack web applications with a focus on clean UI and efficient backend logic. Skilled in React, Node.js, and MongoDB, I enjoy creating scalable, real-time features and intuitive user experiences.</p>
         <div className="skills-container">
           <div className="skill-category">
             <h3>Frontend</h3>
