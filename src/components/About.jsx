@@ -29,9 +29,9 @@ function About() {
   return (
     <div className="about" >
       <div id="backgroundtop2"></div>
-      <h2 className="welcome">Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;</h2>
+      <h2 className="welcome">Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;Welcome! &nbsp;&nbsp;</h2>
       <div id="Aboutme">
-        <h2 id="about">About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;</h2>
+        <h2 id="about">About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;About Me &nbsp;&nbsp;</h2>
         <div id="aboutmemain">
           <p id="mydetails">
             Hi, I'm <b>Ujjwal</b>, a software developer and B.Tech student at <b>IIIT Una, HP</b>,specializing in <b>Web development</b> and <b>DSA</b>.

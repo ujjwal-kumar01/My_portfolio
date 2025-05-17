@@ -95,7 +95,7 @@ function Top() {
             <img src={githubIcon} alt="GitHub" />
           </a>
           <a
-            href="https://www.linkedin.com/in/ujjwal-kumar-692501296/"
+            href="https://www.linkedin.com/in/ujjwal-dev-engineer/"
             target="_blank"
             rel="noopener noreferrer"
           >

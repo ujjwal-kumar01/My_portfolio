@@ -1,6 +1,6 @@
 /* Base styles */
 body {
-  background-color: #1d1d1d;
+  /* background-color: #1d1d1d; */
   color: white;
   margin: 0;
   padding: 0;
@@ -12,8 +12,8 @@ body {
 }
 
 .social-links {
-  right:15px;
-  bottom: 15px;
+  right:25px;
+  bottom: 25px;
   position: fixed;
   /* margin-top: 1.5rem; */
   display: flex;

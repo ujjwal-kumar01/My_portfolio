@@ -8,6 +8,7 @@
   opacity: 1;
 }
 #c{
+  max-height:fit-content;
   position: relative;
   display: block;
   /* white-space: nowrap; */
@@ -28,6 +29,13 @@
   animation: slideText2 30s linear infinite;
   color: rgb(0, 0, 0);
   background-color: #f45926;
+}
+
+.contactform{
+  background-color: #D1D5DB;
+}
+#c h1{
+  color: #1F2937;
 }
 
 /* .covering{

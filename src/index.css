@@ -1,1 +1,10 @@
 @import "tailwindcss";
+body {
+  background-image: url('./components/icons/image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* This is the key */
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}

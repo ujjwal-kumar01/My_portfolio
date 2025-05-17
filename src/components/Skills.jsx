@@ -14,11 +14,13 @@ const skillImages = {
   MongoDB: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png',
   Git: 'https://cdn-icons-png.flaticon.com/512/2111/2111288.png',
   GitHub: 'https://cdn-icons-png.flaticon.com/512/733/733553.png',
-  'VS Code': 'https://cdn.icon-icons.com/icons2/1381/PNG/512/visualstudiocode_93875.png',
+  'VS Code': 'https://raw.githubusercontent.com/github/explore/main/topics/visual-studio-code/visual-studio-code.png',
   Vercel: 'https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png',
   Postman: 'https://cdn.worldvectorlogo.com/logos/postman.svg',
   C: 'https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png',
   'C++': 'https://cdn-icons-png.flaticon.com/512/226/226777.png',
+  TypeScript: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+  NextJS: 'https://cdn.worldvectorlogo.com/logos/nextjs-2.svg',
 };
 
 function Skills() {
@@ -62,13 +64,13 @@ function Skills() {
           <div className="skill-category">
             <h3>Frontend</h3>
             <div className="skill-items">
-              {['HTML', 'CSS', 'JavaScript', 'React Js', 'Tailwind CSS'].map(renderSkillItem)}
+              {['HTML', 'CSS', 'JavaScript', 'React Js', 'Tailwind CSS','TypeScript'].map(renderSkillItem)}
             </div>
           </div>
           <div className="skill-category">
             <h3>Backend</h3>
             <div className="skill-items">
-              {['Node Js', 'Express', 'MySQL', 'MongoDB'].map(renderSkillItem)}
+              {['Node Js', 'Express', 'MySQL', 'MongoDB','NextJS'].map(renderSkillItem)}
             </div>
           </div>
           <div className="skill-category">
