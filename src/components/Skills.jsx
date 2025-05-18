@@ -64,13 +64,13 @@ function Skills() {
           <div className="skill-category">
             <h3>Frontend</h3>
             <div className="skill-items">
-              {['HTML', 'CSS', 'JavaScript', 'React Js', 'Tailwind CSS','TypeScript'].map(renderSkillItem)}
+              {['HTML', 'CSS', 'JavaScript', 'React Js', 'Tailwind CSS',].map(renderSkillItem)}
             </div>
           </div>
           <div className="skill-category">
             <h3>Backend</h3>
             <div className="skill-items">
-              {['Node Js', 'Express', 'MySQL', 'MongoDB','NextJS'].map(renderSkillItem)}
+              {['Node Js', 'Express', 'MySQL', 'MongoDB',].map(renderSkillItem)}
             </div>
           </div>
           <div className="skill-category">
