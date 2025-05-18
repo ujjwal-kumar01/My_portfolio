@@ -9,8 +9,7 @@ Welcome to the source code of my personal portfolio website! This site showcases
 ## 🛠 Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript, React, Tailwind CSS  
-- **Animations**: Framer Motion, AOS  
-- **Hosting**: Vercel / Netlify / GitHub Pages
+- **Hosting**: Vercel
 
 ## 📌 Features
 
