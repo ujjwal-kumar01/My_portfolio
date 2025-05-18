@@ -4,7 +4,7 @@ Welcome to the source code of my personal portfolio website! This site showcases
 
 ## 🚀 Live Demo
 
-👉 [View Live Portfolio](https://my-portfolio-omega-eight-53.vercel.app/)
+👉 [View Live Portfolio](https://my-portfolio-git-main-ujjwal-kumar01s-projects.vercel.app/)
 
 ## 🛠 Tech Stack
 
