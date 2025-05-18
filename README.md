@@ -35,7 +35,7 @@ Welcome to the source code of my personal portfolio website! This site showcases
 ## 🧠 How to Run Locally
 
 ```bash
-git clone https://github.com/ujjwlkmr/portfolio-website.git
+git clone https://github.com/ujjwal-kumar01/My_portfolio.git
 cd portfolio-website
 npm install
 npm run dev
