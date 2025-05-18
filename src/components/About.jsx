@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import html_css_collage_concept from "./icons/html-css-collage-concept.jpg";
-import "./css_files/Aboutme.css";
+import "./css_files/AboutMe.css";
 import resumePdf from "../assets/resume_ujjwal.pdf"; // place your resume in /src/resume
 
 function About() {
