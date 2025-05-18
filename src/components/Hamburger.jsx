@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./css_files/hamburger.css"; // Import CSS
+import "./css_files/Hamburger.css"; // Import CSS
 import Navi from "./Nav"; // ✅ Import but don't render by default
 
 function Hamburger() {
