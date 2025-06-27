@@ -4,9 +4,9 @@ import Projects from './Projects';
 
 const skillImages = {
   HTML: 'https://cdn.icon-icons.com/icons2/2107/PNG/96/file_type_html_icon_130541.png',
-  CSS: 'https://static-00.iconduck.com/assets.00/file-type-css-icon-226x256-ytqdyr76.png',
-  JavaScript: 'https://static-00.iconduck.com/assets.00/javascript-js-icon-512x512-q3igwln6.png',
-  'React Js': 'https://static-00.iconduck.com/assets.00/react-icon-256x228-97ltgbl1.png',
+  CSS: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  JavaScript: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'React Js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   'Tailwind CSS': 'https://seekicon.com/free-icon-download/tailwindcss_1.svg',
   'Node Js': 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_node_icon_130301.png',
   Express: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png',
@@ -70,7 +70,7 @@ function Skills() {
           <div className="skill-category">
             <h3>Backend</h3>
             <div className="skill-items">
-              {['Node Js', 'Express', 'MySQL', 'MongoDB',].map(renderSkillItem)}
+              {['Node Js', 'Express', 'MySQL', 'MongoDB', 'NextJS', 'TypeScript'].map(renderSkillItem)}
             </div>
           </div>
           <div className="skill-category">
