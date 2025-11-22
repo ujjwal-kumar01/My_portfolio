@@ -37,8 +37,11 @@ function About() {
             Hi, I'm <b>Ujjwal</b>, a software developer and B.Tech student at <b>IIIT Una, HP</b>,specializing in <b>Web development</b> and <b>DSA</b>.
             I have hands-on experience in full-stack development, focusing on scalable solutions and problem-solving.<br />
             <br/>
-            <a href={resumePdf} download className="resume-btn">
+            {/* <a href={resumePdf} download className="resume-btn">
               Download Resume
+            </a> */}
+            <a href='https://drive.google.com/file/d/1818vWc8c8dDd7-8MoCO-2n76fN352wuv/view?usp=sharing' target="_blank" className="resume-btn">
+              View Resume
             </a>
           </p>
           <div id="htmlicons">
