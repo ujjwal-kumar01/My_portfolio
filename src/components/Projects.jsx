@@ -31,6 +31,34 @@ const Projects = () => {
       <h2 className="projects-heading">Projects</h2>
       <div id="mydetails3">I love building meaningful web applications that solve real-world problems. From full-stack platforms to browser extensions and AI-based tools, each project reflects my passion for clean architecture, user-centric design, and efficient problem-solving.</div>
       <div className="projects-container">
+        
+        {/* Jarvis Extension */}
+        <a
+          href="https://github.com/ujjwal-kumar01/Jarvis-extension"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-icon-link"
+        >
+          <div className="project-card">
+            <div className="image-wrapper">
+              <img src={jarvis} alt="Jarvis AI Extension" className="project-image" />
+            </div>
+
+            <div className="project-content">
+              <h3 className="text-xl font-semibold mb-2">Jarvis AI Chrome Extension</h3>
+              <p className="text-justify">
+                An AI-powered Chrome extension inspired by Jarvis that assists users
+                directly in the browser. Perform smart searches, generate content,
+                and boost productivity with quick AI responses in a clean,
+                minimal interface.
+              </p>
+            </div>
+
+            <img src={github} className="github-icon" alt="GitHub" />
+            <div className="visit">Visit</div>
+          </div>
+        </a>
+        
         {/* Alumni Connect */}
         <a
           href="https://github.com/ujjwal-kumar01/Alumni-Connect"
@@ -77,33 +105,6 @@ const Projects = () => {
           </div>
         </a>
 
-        {/* Jarvis Extension */}
-<a
-  href="https://github.com/ujjwal-kumar01/Jarvis-extension"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="github-icon-link"
->
-  <div className="project-card">
-    <div className="image-wrapper">
-      <img src={jarvis} alt="Jarvis AI Extension" className="project-image" />
-    </div>
-
-    <div className="project-content">
-      <h3 className="text-xl font-semibold mb-2">Jarvis AI Chrome Extension</h3>
-      <p className="text-justify">
-        An AI-powered Chrome extension inspired by Jarvis that assists users
-        directly in the browser. Perform smart searches, generate content,
-        and boost productivity with quick AI responses in a clean,
-        minimal interface.
-      </p>
-    </div>
-
-    <img src={github} className="github-icon" alt="GitHub" />
-    <div className="visit">Visit</div>
-  </div>
-</a>
-        
       </div>
     </section>
   );
