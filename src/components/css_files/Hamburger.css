@@ -19,7 +19,7 @@
     flex-direction: column;
     gap: 5px;
     padding: 12px;
-    background: rgb(64, 62, 62);
+    background: rgb(43, 40, 40);
     border-radius: 8px;
     cursor: pointer;
     z-index: 1001;
@@ -40,7 +40,7 @@
 
 /* 🟢 Change all lines together on hover */
 .hamburger-btn:hover div {
-    background-color: #ff9800; /* Orange */
+    background-color: #53f9f4; /* Orange */
 }
 
 /* 🟢 Open State - Turns into "X" */
@@ -74,7 +74,8 @@
 
 /* 🔥 Show Menu (Slide-In) */
 .hamburger-menu.show {
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(26, 26, 26);
+    transition:  0.3s ease-in-out;
     right: 0;
 }
 

@@ -14,6 +14,7 @@
   /* white-space: nowrap; */
   overflow: hidden;
   box-sizing: border-box;
+  margin-top:4% ;
 }
 #ContactUs{
   display: block;
@@ -22,13 +23,15 @@
   font-size: 4rem;
   overflow:hidden;
   position: relative;
+  text-align: center;
+  justify-content: center;
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  width: max-content;
-  animation: slideText2 30s linear infinite;
-  color: rgb(0, 0, 0);
-  background-color: #f45926;
+  width: 100%;
+  /* animation: slideText2 30s linear infinite; */
+  color: #D1D5DB;
+  /* background-color: #f45926; */
 }
 
 .contactform{

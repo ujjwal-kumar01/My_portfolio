@@ -1,3 +1,42 @@
-body{
-  scroll-behavior: smooth;
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Main Circle Cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6ee7ff;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 
+    width 0.2s ease,
+    height 0.2s ease,
+    background 0.2s ease,
+    border 0.2s ease;
+  z-index: 9999;
+}
+
+/* Glow effect */
+.custom-cursor::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: rgba(110, 231, 255, 0.2);
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* Hover grow effect */
+.cursor-hover {
+  width: 35px;
+  height: 35px;
+  background: rgba(110, 231, 255, 0.15);
+  border: 2px solid #6ee7ff;
 }

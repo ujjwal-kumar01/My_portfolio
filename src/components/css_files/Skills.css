@@ -1,6 +1,6 @@
 /* 🔹 Skills Section Styling */
 #skills-section {
-  margin-top: 3rem;
+  margin-top: 6rem;
   color: white;
   padding: 0rem 1rem 3rem 1rem;
   opacity: 0;
@@ -31,7 +31,12 @@
 }
 
 .skill-category {
-  background: #101322;
+  background: linear-gradient(
+        to bottom right,
+        #000000 0%,
+        #18181b 50%,
+        #000000 100%
+    );
   border-radius: 20px;
   padding: 20px 30px;
   box-shadow: 0 0 15px #f45926;
@@ -81,7 +86,6 @@
   font-size: 1rem;
   color: #fff;
   border: 1px solid #333;
-  transition: background 0.3s ease;
 }
 
 .skill-with-icon:hover {

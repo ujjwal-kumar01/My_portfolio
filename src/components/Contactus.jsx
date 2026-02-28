@@ -44,21 +44,16 @@ export default function Contact() {
 
   return (
     <div id="c">
-      <h2 id="ContactUs">
-        Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;
-        Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;
-        Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;
-        Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;Contact Me! &nbsp;&nbsp;
-      </h2>
+      <h2 id='ContactUs'>Contact Me! </h2>
 
       <div
         className="relative flex items-center justify-center min-h-screen py-10 px-4"
         id="fadeInEffect"
       >
-        <div className="bg-gray-300 max-w-5xl min-w-[90%] sm:min-w-[80%] md:min-w-[70%] lg:min-w-[60%] p-8 rounded-lg shadow-lg mx-4 sm:mx-auto covering contactform">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="bg-gray-300 max-w-5xl min-w-[90%] sm:min-w-[80%] md:min-w-[70%] lg:min-w-[60%] p-8 rounded-lg  mx-4 sm:mx-auto covering contactform ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 ">
             {/* Contact Info Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 ">
               <h1 className="text-3xl sm:text-4xl text-gray-800 font-extrabold tracking-tight">
                 Get in Touch
               </h1>

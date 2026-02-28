@@ -1,10 +1,239 @@
 @import "tailwindcss";
+
+/* Prevent white flash */
+html {
+  background: #000;
+}
+
 body {
-  background-image: url('./components/icons/image.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; /* This is the key */
-  background-position: center;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(
+    to bottom right,
+    #000000 0%,
+    #18181b 50%,
+    #000000 100%
+  );
+}
+
+/* ✨ Small Dense Stars */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, white, transparent),
+    radial-gradient(1px 1px at 30% 80%, white, transparent),
+    radial-gradient(1px 1px at 50% 40%, white, transparent),
+    radial-gradient(1px 1px at 70% 90%, white, transparent),
+    radial-gradient(1px 1px at 90% 10%, white, transparent);
+
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  opacity: 0.4;
+
+  animation: starsMove 60s linear infinite;
+}
+
+/* ✨ Medium Stars */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, white, transparent),
+    radial-gradient(2px 2px at 80% 40%, white, transparent);
+
+  background-size: 800px 800px;
+  background-repeat: repeat;
+  opacity: 0.6;
+
+  animation: starsMove 120s linear infinite;
+}
+
+/* ✨ Extra Tiny Fast Stars (Depth Layer 3) */
+.stars-layer-3 {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+
+  background-image:
+    radial-gradient(1px 1px at 15% 25%, white, transparent),
+    radial-gradient(1px 1px at 45% 65%, white, transparent),
+    radial-gradient(1px 1px at 75% 35%, white, transparent),
+    radial-gradient(1px 1px at 85% 75%, white, transparent);
+
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  opacity: 0.3;
+
+  animation: starsMoveFast 40s linear infinite;
+}
+
+/* ⭐ Seamless Infinite Movement */
+@keyframes starsMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 1000px;
+  }
+}
+
+@keyframes starsMoveFast {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 800px;
+  }
+}
+
+/* 🪐 Planets */
+.planet {
+  opacity: 0.4;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatPlanet 20s ease-in-out infinite;
+}
+
+/* Big planet */
+.planet.big {
+  width: 100px;
+  height: 100px;
+  top: 90%;
+  left: 0%;
+  background: radial-gradient(circle at 30% 30%, #6ee7ff, #1e3a8a);
+  box-shadow: 0 0 40px rgba(0, 162, 255, 0.6);
+}
+
+/* Small planet */
+.planet.small {
+  width: 90px;
+  height: 90px;
+  top: 12%;
+  right: 1%;
+  background: radial-gradient(circle at 40% 40%, #facc15, #7c2d12);
+  box-shadow: 0 0 25px rgba(255, 200, 0, 0.6);
+}
+
+@keyframes floatPlanet {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ☄️ Asteroids */
+.asteroid {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px white;
+  pointer-events: none;
+  z-index: 1;
+  animation: flyAsteroid linear infinite;
+}
+
+.asteroid.one {
+  top: -10px;
+  left: 20%;
+  animation-duration: 12s;
+}
+
+.asteroid.two {
+  top: -10px;
+  left: 70%;
+  animation-duration: 18s;
+}
+
+@keyframes flyAsteroid {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) translateX(-100px);
+    opacity: 0;
+  }
+}
+
+/* 🌞 Solar System Container */
+.solar-system {
+  opacity: 0.1;
+  position: fixed;
+  bottom: 2%;
+  right: 0%;
+  width: 220px;
+  height: 220px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 🌟 Sun */
+.sun {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #ffd700, #ff8c00, #ff4500);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 60px rgba(255, 140, 0, 0.8);
+}
+
+/* 🛰 Orbit Path */
+.orbit {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 🪐 Orbiting Planet */
+.orbiting-planet {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle at 30% 30%, #6ee7ff, #1e3a8a);
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 15px rgba(0, 162, 255, 0.8);
+}
+
+/* 🌀 Orbit Animation */
+.orbit-rotate {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotateOrbit 12s linear infinite;
+}
+
+@keyframes rotateOrbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
 }

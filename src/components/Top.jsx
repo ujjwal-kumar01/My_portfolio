@@ -1,17 +1,26 @@
 import React, { useEffect, useState } from "react";
 import myPhoto from "./icons/myphoto1.jpg";
-import githubIcon from "./icons/github-94.png"; // replace with your icons
+import githubIcon from "./icons/github-94.png";
 import linkedinIcon from "./icons/linkedin.png";
 import instagramIcon from "./icons/instagram.png";
 import "./css_files/Top.css";
 import Hamburger from "./Hamburger";
 
 function Top() {
-  const words = ["Developer", "Designer"];
+  const words = [
+    "Software Developer",
+    "Full-Stack Engineer",
+    "Tech Enthusiast",
+    "Problem Solver",
+  ];
+
   const [currentWord, setCurrentWord] = useState(words[0]);
 
+  /* ================= Typing Animation ================= */
   useEffect(() => {
-    function deleteAndType() {
+    let timeout;
+
+    const deleteAndType = () => {
       let currentWordIndex = words.indexOf(currentWord);
       let i = currentWord.length;
       let j = 0;
@@ -33,26 +42,26 @@ function Top() {
             } else {
               clearInterval(typeInterval);
             }
-          }, 150);
+          }, 100);
         }
-      }, 100);
-    }
+      }, 60);
+    };
 
-    const interval = setTimeout(deleteAndType, 1000);
-    return () => clearTimeout(interval);
+    timeout = setTimeout(deleteAndType, 1200);
+
+    return () => clearTimeout(timeout);
   }, [currentWord]);
 
+  /* ================= Intersection Animation ================= */
   useEffect(() => {
     const elements = document.querySelectorAll(".webtext");
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
+          entry.isIntersecting
+            ? entry.target.classList.add("show")
+            : entry.target.classList.remove("show");
         });
       },
       { threshold: 0.5 }
@@ -65,27 +74,40 @@ function Top() {
     };
   }, []);
 
+  /* ================= Split Word Logic ================= */
+
+  const splitWords = currentWord.split(" ");
+  const firstWord = splitWords[0];
+  const remainingWords = splitWords.slice(1).join(" ");
+
   return (
     <div id="home">
       <div className="top">
         <div className="ribbon">OPEN TO WORK</div>
         <div className="marg">
-          <div className="techi"> Tech Enthusiast</div>
-          <div id="hello">Hii, I'm Ujjwal 👋</div>
+          <div className="techi">Tech Enthusiast</div>
+          <div id="hello">Hi, I'm Ujjwal 👋</div>
           <div className="stacki">Frontend → Backend</div>
         </div>
       </div>
+
       <div className="ribbonPosition">
         <div className="ribbon2">OPEN TO WORK</div>
         <div className="image">
+          {/* Uncomment if using photo */}
           <img src={myPhoto} alt="profilePic" className="photo" />
         </div>
       </div>
+
       <Hamburger />
+
       <div className="top-container flex flex-col">
-        <div className="webtext">Web</div>
-        <div className="webtext text">{currentWord}</div>
-        {/* 🔗 Social Links + Resume */}
+        <div className="webtext">{firstWord}</div>
+        <div className="webtext text">
+          {remainingWords || "\u00A0"}
+        </div>
+
+        {/* Social Links */}
         <div className="social-links">
           <a
             href="https://github.com/ujjwal-kumar01"
@@ -94,6 +116,7 @@ function Top() {
           >
             <img src={githubIcon} alt="GitHub" />
           </a>
+
           <a
             href="https://www.linkedin.com/in/ujjwal-dev-engineer/"
             target="_blank"
@@ -101,6 +124,7 @@ function Top() {
           >
             <img src={linkedinIcon} alt="LinkedIn" />
           </a>
+
           <a
             href="https://www.instagram.com/ujjwal_srivastava01/"
             target="_blank"

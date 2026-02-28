@@ -1,8 +1,9 @@
 .about {
-    margin: 0rem 0rem;
+    margin: 2rem 0rem;
     /* top: -3rem; */
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .resume-btn {
@@ -19,28 +20,29 @@
   box-shadow: 0 2px 15px #f45926;
 }
 .resume-btn:hover {
-  background-color: #1e1e5e;
+  background-color: #160b16;
   box-shadow: 0 0 20px #f45926;
 }
 #Aboutme h2 {
-    background-color: #f45926;
+    justify-content: center;
+    /* background-color: #282828; */
     font-family: 'Impact', sans-serif;
-    display:block;
+    /* display:block; */
     white-space: nowrap;
     font-size: 5rem;
-    color: #000000;
+    color: white;
     overflow:hidden;
     position: relative;
     width: 100%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 #Aboutme h2 {
     display: flex;
-    width: max-content;
-    animation: slideText 30s linear infinite;
+    /* width: max-content; */
+    /* animation: slideText 30s linear infinite; */
 }
-
+/* 
 .welcome{
     display: block;
     font-family: 'Impact', sans-serif;
@@ -73,7 +75,7 @@
     to {
         transform: translateX(-50%);
     }
-}
+} */
 
 #aboutmemain {
     margin-top: 1rem;

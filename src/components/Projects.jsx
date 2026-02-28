@@ -3,6 +3,7 @@ import "./css_files/projects.css";
 import github from "./icons/github-94.png";
 import extension1 from "../assets/extension1.png";
 import alumni1 from "../assets/alumni1.png";
+import jarvis from "../assets/jarvis.png";
 
 const Projects = () => {
   useEffect(() => {
@@ -75,6 +76,34 @@ const Projects = () => {
             <div className="visit">Visit</div>
           </div>
         </a>
+
+        {/* Jarvis Extension */}
+<a
+  href="https://github.com/ujjwal-kumar01/Jarvis-extension"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="github-icon-link"
+>
+  <div className="project-card">
+    <div className="image-wrapper">
+      <img src={jarvis} alt="Jarvis AI Extension" className="project-image" />
+    </div>
+
+    <div className="project-content">
+      <h3 className="text-xl font-semibold mb-2">Jarvis AI Chrome Extension</h3>
+      <p className="text-justify">
+        An AI-powered Chrome extension inspired by Jarvis that assists users
+        directly in the browser. Perform smart searches, generate content,
+        and boost productivity with quick AI responses in a clean,
+        minimal interface.
+      </p>
+    </div>
+
+    <img src={github} className="github-icon" alt="GitHub" />
+    <div className="visit">Visit</div>
+  </div>
+</a>
+        
       </div>
     </section>
   );
