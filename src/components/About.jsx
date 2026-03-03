@@ -39,7 +39,7 @@ function About() {
             {/* <a href={resumePdf} download className="resume-btn">
               Download Resume
             </a> */}
-            <a href='https://drive.google.com/file/d/1818vWc8c8dDd7-8MoCO-2n76fN352wuv/view?usp=sharing' target="_blank" className="resume-btn">
+            <a href='https://drive.google.com/file/d/1UMH258QjRzzXqfURer5PbdYZnvpQl1JY/view' target="_blank" className="resume-btn">
               View Resume
             </a>
           </p>
