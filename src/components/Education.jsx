@@ -56,7 +56,7 @@ export default function Education() {
             <p className="edu-degree">
               Senior Secondary – PCM (CBSE)
             </p>
-            <p className="edu-grade">Percentage: 94.5%</p>
+            <p className="edu-grade">Percentage: 94%</p>
             <span className="timeline-segment"></span>
           </div>
 
